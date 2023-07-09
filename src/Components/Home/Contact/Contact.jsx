@@ -4,7 +4,7 @@ const Contact = () => {
     return (
         <div className='w-full max-w-7xl mx-auto mt-12 sm:mt-32' style={{ backgroundColor: 'rgba(249, 219, 22, 0.08)' }}>
             <div>
-                <section className='py-16 px-5 relative overflow-hidden sm:pt-32 w-full max-w-4xl mx-auto'>
+                <section id='contact' className='py-16 px-5 relative overflow-hidden sm:pt-32 w-full max-w-4xl mx-auto'>
                     <div className='mx-auto items-center flex flex-col gap-2 sm:gap-4 w-full max-w-4xl'>
                         <h2 className='text-black-100 text-3xl sm:text-5xl md:leading-tight text-center font-bold'>Bridge the Gap, Nourish with Bhojan Mitra</h2>
                         <div className='mb-16 mt-8 text-center w-full max-w-sm'>
