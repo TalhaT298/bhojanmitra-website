@@ -1,97 +1,44 @@
 import React, { useState } from 'react';
-import { SlArrowLeft, SlArrowRight } from 'react-icons/sl'
-import imageOne from '../../../../public/assets/images/IMG-20230710-WA0001.jpg'
-import imageTwo from '../../../../public/assets/images/IMG-20230710-WA0002.jpg'
-import imageThree from '../../../../public/assets/images/IMG-20230710-WA0004.jpg'
-import imageFour from '../../../../public/assets/images/IMG-20230710-WA0005.jpg'
-import imageFive from '../../../../public/assets/images/IMG-20230710-WA0006.jpg'
-import imageSix from '../../../../public/assets/images/IMG-20230710-WA0007.jpg'
-import imageSeven from '../../../../public/assets/images/IMG-20230710-WA0008.jpg';
-import imageEight from '../../../../public/assets/images/IMG-20230710-WA0009.jpg';
-import imageNine from '../../../../public/assets/images/IMG-20230710-WA0010.jpg';
-import imageTen from '../../../../public/assets/images/IMG-20230710-WA0011.jpg';
-import imageEleven from '../../../../public/assets/images/IMG-20230710-WA0012.jpg';
+import imageOne from '../../../../public/assets/images/IMG-20230706-WA0001.jpg'
 
-const images = [
-    { src: imageOne, alt: 'Image 1' },
-    { src: imageTwo, alt: 'Image 2' },
-    { src: imageThree, alt: 'Image 3' },
-    { src: imageFour, alt: 'Image 4' },
-    { src: imageFive, alt: 'Image 5' },
-    { src: imageSix, alt: 'Image 6' },
-    { src: imageSeven, alt: 'Image 7' },
-    { src: imageEight, alt: 'Image 8' },
-    { src: imageNine, alt: 'Image 9' },
-    { src: imageTen, alt: 'Image 10' },
-    { src: imageEleven, alt: 'Image 11' },
-];
 const App = () => {
 
-    const [startIndex, setStartIndex] = useState(0);
-    const [itemsPerPage, setItemsPerPage] = useState(3)
-
-    const totalPages = Math.ceil(images.length / itemsPerPage);
-    const pages = [...Array(totalPages).keys()];
-
-    const nextImages = () => {
-        const newIndex = startIndex + 3;
-        setStartIndex(newIndex < images.length ? newIndex : 0)
-    };
-
-    const previousImages = () => {
-        const newIndex = startIndex - 3;
-        if (newIndex >= 0) {
-            setStartIndex(newIndex);
-        }
-        else {
-            setStartIndex(images.length - 2);
-        }
-    };
-
-    const displayedImages = images.slice(startIndex, startIndex + 3);
 
     return (
-        <section id='app' className='px-5 sm:py-32 relative'>
+        <section id='app' className='px-5 sm:py-32 md:py-5 relative'>
             <div className='w-full max-w-7xl mx-auto relative text-center font-popins'>
                 <div>
-                    <h2 className='text-3xl sticky top-6 sm:text-5xl md:leading-tight sm:mb-4 font-bold text-black-100'>App Lunch</h2>
+                    <h2 className='text-3xl sticky top-6 sm:text-5xl md:leading-tight sm:mb-4 font-bold text-black-100'>App Launch!</h2>
                 </div>
-                <div>
-                    <div className='flex items-center justify-center transition-all duration-1000 ease-in-out'>
-                        <button
-                            onClick={previousImages}
-                            className='absolute left-5 text-gray-500 cursor-pointer z-50'>
-                            <SlArrowLeft className='text-4xl' />
-                        </button>
-                        <div className='w-full h-[600px] flex items-center justify-center gap-5 px-5' style={{ backgroundColor: 'rgba(249, 219, 22, 0.08)', transition: 'all 700ms ease-in-out' }}>
-                            {displayedImages.map((image, index) => (
-                                <img
-                                    key={index}
-                                    src={image.src}
-                                    className='rounded-md'
-                                    alt={image.alt}
-                                    style={{ width: '30%', height: '300px' }}
-                                />
-                            ))}
+                <div style={{ backgroundColor: 'rgba(249, 219, 22, 0.08)' }}>
+                    <div className='flex items-center justify-center'>
+
+                        <div className='w-full flex items-center justify-center gap-5 px-5'>
+
+                            <img
+                                src={imageOne}
+                                className='rounded-md'
+                                alt={'app launch image'}
+                                style={{ width: '50%' }}
+                            />
                         </div>
-                        <button
-                            onClick={nextImages}
-                            className='absolute right-5 text-gray-500 cursor-pointer z-50'>
-                            <SlArrowRight className='text-4xl' />
-                        </button>
                     </div>
-                    <div className='absolute inset-0 flex items-end justify-center'>
-                        {
-                            pages?.map((page, index) => <p
-                                key={index}
-                                className={`w-3 h-3 mr-2 rounded-full ${startIndex === page * 3 ? 'bg-red-400' : 'bg-slate-700'}`}
-                            ></p>)
-                        }
+                    <div className='mt-5 px-5'>
+                        <p className='text-black-100 mb-5 text-lg first-letter:text-7xl text-justify first-letter:float-left first-letter:mr-1 first-letter:font-semibold leading-loose'>
+                            Official launch event of the <span className='font-bold'>"Bhojan Mitra"</span> app, an exceptional initiative developed by Unicorniz, a startup company based out of Andaman. The event was honored by the presence of <span className='font-bold'>Shri Azizur Rehman Sir, Ex-Senior Vice Chairperson of PBMC 2022-23 and Councilor of Ward No. 06, State Vice President.</span> As a gesture of appreciation, we commenced the event by felicitating Shri Azizur Rehman Sir with a bouquet
+                        </p>
+                        <p className='text-lg text-black-100 text-justify mb-5'>
+                            Shri Azizur Rehman Sir delivered an insightful address, highlighting the effectiveness of the "Bhojan Mitra" app's solution. He praised the app for its ability to seamlessly connect food donors with those in need, while also actively involving volunteers to ensure an efficient process. Shri Azizur Rehman Sir emphasized the global impact of the app, emphasizing its potential to reduce food waste and make a significant difference in combating hunger. He commended Unicorniz for the selection of their idea to participate in the esteemed Singapore India Hackathon, recognizing the app's innovative approach and its potential for recognition on a global scale.
+                        </p>
+
+                        <p className='text-lg text-black-100 text-justify'>
+                            With the support and enthusiasm of our partners, volunteers, and the wider community, we are confident that the "Bhojan Mitra" app will have a lasting impact, making a tangible difference in the lives of those in need. Unicorniz is committed to driving positive change and looks forward to the future, where we can collectively tackle food waste and create a world where everyone has access to nutritious meals.
+
+                        </p>
                     </div>
                 </div>
             </div>
-
-        </section >
+        </section>
 
     );
 };

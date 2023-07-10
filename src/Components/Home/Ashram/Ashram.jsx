@@ -47,19 +47,19 @@ const Ashram = () => {
     }))
     // console.log(images)
     return (
-        <section id='ashram' className='px-5 sm:py-32 md:py-0 relative'>
+        <section id='ashram' className='px-5 sm:py-32 md:py-5 relative'>
             <div className='w-full max-w-7xl mx-auto relative text-center font-popins'>
                 <div>
-                    <h2 className='text-3xl sticky top-6 sm:text-5xl md:leading-tight sm:mb-4 font-bold text-black-100'>Ashram Connect</h2>
+                    <h2 className='text-3xl sticky top-6 sm:text-5xl md:leading-tight sm:mb-4 font-bold text-black-100'>Aashram Connect</h2>
                 </div>
-                <div>
+                <div style={{ backgroundColor: 'rgba(249, 219, 22, 0.08)', transition: 'all 1000ms ease-in-out' }}>
                     <div className='flex items-center justify-center'>
                         <button
                             onClick={gotoPrevious}
                             className='absolute left-5 text-gray-500 cursor-pointer z-50'>
                             <SlArrowLeft className='text-4xl' />
                         </button>
-                        <div className='w-full h-[600px] flex items-center justify-center gap-5 px-5' style={{ backgroundColor: 'rgba(249, 219, 22, 0.08)', transition: 'all 1000ms ease-in-out' }}>
+                        <div className='w-full h-[600px] flex items-center justify-center gap-5 px-5'>
 
                             <img
                                 src={images[currentIndex].src}
@@ -74,13 +74,21 @@ const Ashram = () => {
                             <SlArrowRight className='text-4xl' />
                         </button>
                     </div>
-                    <div className='absolute inset-0 flex items-end justify-center'>
+                    <div className='flex items-center justify-center mb-5'>
                         {
-                            contents.map((_, index) => <p
+                            contents?.map((_, index) => <p
                                 key={index}
                                 className={`w-3 h-3 mr-2 rounded-full ${currentIndex === index ? 'bg-red-400' : 'bg-slate-700'}`}
                             ></p>)
                         }
+                    </div>
+                    <div>
+                        <p className="text-black-100 mb-5 text-lg first-letter:text-7xl text-justify first-letter:float-left first-letter:mr-1 first-letter:font-semibold leading-loose">
+                            Vanavasi Kalyan Ashram witnessed an awe-inspiring connect and awareness session, showcasing the profound impact of our revolutionary app, Bhojan Mitra. Designed to combat food waste while forging meaningful connections between generous donors and those in need, the event served as a beacon of hope and collaboration. The prestigious occasion was graced by esteemed individuals including the Director of the Department of Health Services, the Principal of Dr. Bhimrao Ambedkar Institute of Technology, and an array of other distinguished officials. Their presence attested to the importance and significance of Bhojan Mitra in transforming the lives of countless individuals, ensuring that no one goes hungry while simultaneously fostering a spirit of compassion and unity within society.
+                        </p>
+                        <p className='text-lg text-black-100 text-justify'>
+                            As the session unfolded, hearts were opened, minds were enlightened, and a collective commitment was forged to alleviate the plight of the underprivileged through the power of technology and human empathy. Together, we embarked on a journey toward a more sustainable and compassionate future, where no meal is wasted, and every person's hunger is satiated with dignity and respect.
+                        </p>
                     </div>
                 </div>
             </div>
