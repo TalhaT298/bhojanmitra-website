@@ -8,7 +8,7 @@ const App = () => {
         <section id='app' className='px-5 sm:py-32 md:py-5 relative'>
             <div className='w-full max-w-7xl mx-auto relative text-center font-popins'>
                 <div>
-                    <h2 className='text-3xl sticky top-6 sm:text-5xl md:leading-tight sm:mb-4 font-bold text-black-100'>App Launch!</h2>
+                    <h2 className='text-3xl sm:text-5xl md:leading-tight sm:mb-4 font-bold text-black-100 '>App Launch!</h2>
                 </div>
                 <div style={{ backgroundColor: 'rgba(249, 219, 22, 0.08)' }}>
                     <div className='flex items-center justify-center'>

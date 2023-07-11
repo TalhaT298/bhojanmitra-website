@@ -47,7 +47,7 @@ const Ashram = () => {
     }))
     // console.log(images)
     return (
-        <section id='ashram' className='px-5 sm:py-32 md:py-5 relative'>
+        <section id='aashram' className='px-5 sm:py-32 md:py-5 relative'>
             <div className='w-full max-w-7xl mx-auto relative text-center font-popins'>
                 <div>
                     <h2 className='text-3xl sticky top-6 sm:text-5xl md:leading-tight sm:mb-4 font-bold text-black-100'>Aashram Connect</h2>
