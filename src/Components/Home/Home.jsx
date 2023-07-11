@@ -5,6 +5,7 @@ import Contact from './Contact/Contact';
 import Banner from './Banner/Banner';
 import App from './App/App';
 import Ashram from './Ashram/Ashram';
+import Stats from './Stats/Stats';
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <Feature />
             <App />
             <Ashram />
+            <Stats />
             <Faq />
             <Contact />
         </div>
