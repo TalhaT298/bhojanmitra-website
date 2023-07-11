@@ -39,6 +39,57 @@ const Feature = () => {
                     <div className='p-10 flex flex-wrap gap-x-20 gap-y-24 isolate md:p-16 z-50 backdrop-blur-2xl rounded-xl' style={{ backgroundColor: 'rgba(249, 219, 22, 0.08)' }}>
                         <div className='font-popins lg:grow lg:shrink lg:basis-[30%] text-start'>
                             <span className='font-bold text-2xl text-orange-100 mb-2'>01</span>
+                            <h3 className='text-2xl font-bold text-black-100 mb-2 md:text-3xl'>Donor-Needy Connection</h3>
+                            <p className='sm:leading-relaxed text-lg sm:text-xl text-black-100'>
+                                The app facilitates seamless connections between donors and those in need. Donors list available food items, quantities, and expiration dates.
+                            </p>
+                        </div>
+                        <div className='font-popins lg:grow lg:shrink lg:basis-[30%] text-start'>
+                            <span className='font-bold text-2xl text-orange-100 mb-2'>02</span>
+                            <h3 className='text-2xl font-bold text-black-100 mb-2 md:text-3xl'>Algorithmic Food Matching</h3>
+                            <p className='sm:leading-relaxed text-lg sm:text-xl text-black-100'>
+                                Advanced algorithms match surplus food with recipients' requirements, ensuring efficient distribution.
+                            </p>
+                        </div>
+                        <div className='font-popins lg:grow lg:shrink lg:basis-[30%] text-start'>
+                            <span className='font-bold text-2xl text-orange-100 mb-2'>03</span>
+                            <h3 className='text-2xl font-bold text-black-100 mb-2 md:text-3xl'>Augmented Reality Food Guide</h3>
+                            <p className='sm:leading-relaxed text-lg sm:text-xl text-black-100'>
+                                Users scan food items with their cameras to receive real-time information on freshness and safety.
+                            </p>
+                        </div>
+                        <div className='font-popins lg:grow lg:shrink lg:basis-[30%] text-start'>
+                            <span className='font-bold text-2xl text-orange-100 mb-2'>04</span>
+                            <h3 className='text-2xl font-bold text-black-100 mb-2 md:text-3xl'>IOT Technology for Quality Assessment</h3>
+                            <p className='sm:leading-relaxed text-lg sm:text-xl text-black-100'>
+                                Integrated IoT sensors detect food quality and freshness, enhancing safety.
+                            </p>
+                        </div>
+                        <div className='font-popins lg:grow lg:shrink lg:basis-[30%] text-start'>
+                            <span className='font-bold text-2xl text-orange-100 mb-2'>05</span>
+                            <h3 className='text-2xl font-bold text-black-100 mb-2 md:text-3xl'> Pick-up Points in NGO&apos;s</h3>
+                            <p className='sm:leading-relaxed text-lg sm:text-xl text-black-100'>Designated collection hubs at partnering NGOs enable easy food transportation.
+                            </p>
+                        </div>
+                        <div className='font-popins lg:grow lg:shrink lg:basis-[30%] text-start'>
+                            <span className='font-bold text-2xl text-orange-100 mb-2'>06</span>
+                            <h3 className='text-2xl font-bold text-black-100 mb-2 md:text-3xl'>Rewards for NGO&apos;s</h3>
+                            <p className='sm:leading-relaxed text-lg sm:text-xl text-black-100'>
+                                Active participation is incentivized with rewards generated from the app's revenue.
+                            </p>
+                        </div>
+                        <div className='font-popins lg:grow lg:shrink lg:basis-[30%] text-start'>
+                            <span className='font-bold text-2xl text-orange-100 mb-2'>06</span>
+                            <h3 className='text-2xl font-bold text-black-100 mb-2 md:text-3xl'>Education and Nourishment</h3>
+                            <p className='sm:leading-relaxed text-lg sm:text-xl text-black-100'>
+                                The app provides nutritional guidance and recipes, empowering recipients.
+                            </p>
+                        </div>
+
+                    </div>
+                    {/* <div className='p-10 flex flex-wrap gap-x-20 gap-y-24 isolate md:p-16 z-50 backdrop-blur-2xl rounded-xl' style={{ backgroundColor: 'rgba(249, 219, 22, 0.08)' }}>
+                        <div className='font-popins lg:grow lg:shrink lg:basis-[30%] text-start'>
+                            <span className='font-bold text-2xl text-orange-100 mb-2'>01</span>
                             <h3 className='text-2xl font-bold text-black-100 mb-2 md:text-3xl'>Reduce Food Waste</h3>
                             <p className='sm:leading-relaxed text-lg sm:text-xl text-black-100'>
                                 Help eliminate food waste by connecting donors with those in need.
@@ -80,7 +131,7 @@ const Feature = () => {
                             </p>
                         </div>
 
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>

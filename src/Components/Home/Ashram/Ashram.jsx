@@ -28,6 +28,7 @@ const contents = [
 
 const Ashram = () => {
     const [currentIndex, setCurrentIndex] = useState(0)
+    const [show, setShow] = useState(false)
 
     const goToNext = () => {
         setCurrentIndex((prevIndex) =>
@@ -59,7 +60,7 @@ const Ashram = () => {
                             className='absolute left-5 text-gray-500 cursor-pointer z-50'>
                             <SlArrowLeft className='text-4xl' />
                         </button>
-                        <div className='w-full h-[600px] flex items-center justify-center gap-5 px-5'>
+                        <div className='w-full h-[550px] flex items-center justify-center gap-5 px-5'>
 
                             <img
                                 src={images[currentIndex].src}
@@ -82,14 +83,29 @@ const Ashram = () => {
                             ></p>)
                         }
                     </div>
-                    <div>
-                        <p className="text-black-100 mb-5 text-lg first-letter:text-7xl text-justify first-letter:float-left first-letter:mr-1 first-letter:font-semibold leading-loose">
-                            Vanavasi Kalyan Ashram witnessed an awe-inspiring connect and awareness session, showcasing the profound impact of our revolutionary app, Bhojan Mitra. Designed to combat food waste while forging meaningful connections between generous donors and those in need, the event served as a beacon of hope and collaboration. The prestigious occasion was graced by esteemed individuals including the Director of the Department of Health Services, the Principal of Dr. Bhimrao Ambedkar Institute of Technology, and an array of other distinguished officials. Their presence attested to the importance and significance of Bhojan Mitra in transforming the lives of countless individuals, ensuring that no one goes hungry while simultaneously fostering a spirit of compassion and unity within society.
-                        </p>
-                        <p className='text-lg text-black-100 text-justify'>
-                            As the session unfolded, hearts were opened, minds were enlightened, and a collective commitment was forged to alleviate the plight of the underprivileged through the power of technology and human empathy. Together, we embarked on a journey toward a more sustainable and compassionate future, where no meal is wasted, and every person's hunger is satiated with dignity and respect.
-                        </p>
-                    </div>
+                    {
+                        show ?
+                            <div className=''>
+                                <p className="text-black-100 mb-5 text-lg first-letter:text-7xl text-justify first-letter:float-left first-letter:mr-1 first-letter:font-semibold leading-loose transition duration-700 ease-in-out">
+                                    Vanavasi Kalyan Ashram witnessed an awe-inspiring connect and awareness session, showcasing the profound impact of our revolutionary app, Bhojan Mitra. Designed to combat food waste while forging meaningful connections between generous donors and those in need, the event served as a beacon of hope and collaboration. The prestigious occasion was graced by esteemed individuals including the Director of the Department of Health Services, the Principal of Dr. Bhimrao Ambedkar Institute of Technology, and an array of other distinguished officials. Their presence attested to the importance and significance of Bhojan Mitra in transforming the lives of countless individuals, ensuring that no one goes hungry while simultaneously fostering a spirit of compassion and unity within society.
+                                </p>
+                                <p className='text-lg text-black-100 text-justify'>
+                                    As the session unfolded, hearts were opened, minds were enlightened, and a collective commitment was forged to alleviate the plight of the underprivileged through the power of technology and human empathy. Together, we embarked on a journey toward a more sustainable and compassionate future, where no meal is wasted, and every person's hunger is satiated with dignity and respect.{''}
+                                    <span
+                                        onClick={() => setShow(!show)}
+                                        className='cursor-pointer text-blue-600 font-medium'> Read Less...</span>
+                                </p>
+                            </div> :
+                            <div>
+                                <p className="text-black-100 mb-5 text-lg first-letter:text-7xl text-justify first-letter:float-left first-letter:mr-1 first-letter:font-semibold leading-loose">Vanavasi Kalyan Ashram witnessed an awe-inspiring connect and awareness session, showcasing the profound impact of our revolutionary app, Bhojan Mitra.{' '}
+
+                                    <span
+                                        onClick={() => setShow(!show)}
+                                        className='cursor-pointer text-blue-600 font-medium'>Read More...</span>
+                                </p>
+
+                            </div>
+                    }
                 </div>
             </div>
 
