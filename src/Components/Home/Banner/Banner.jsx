@@ -1,4 +1,5 @@
 import React from "react";
+import logo from '../../../../public/assets/images/fmibx93p785ldw063amhkzmfyti2 (1).png'
 
 const Banner = () => {
   return (
@@ -26,32 +27,26 @@ const Banner = () => {
             </div>
             <div>
               <section className="relative">
-                <h2 className="mb-3 text-2xl sm:text-2xl font-bold md:leading-tight text-black-100">
-                  Get notified about updates.
-                </h2>
+
                 <div>
-                  <form
-                    action=""
-                    className="flex flex-col sm:flex-row gap-y-2 sm:gap-y-2 max-w-2xl gap-x-2 items-center flex-wrap"
-                  >
-                    <input
-                      className="flex-auto rounded-lg border-0 bg-white px-6 py-4 shadow-sm ring-1 ring-black-100 ring-opacity-10 text-slate-900 text-base focus:ring-2 w-full focus:outline-none focus:ring-black-100
-                      focus:ring-opacity-10 sm:text-xl sm:leading-6"
-                      type="email"
-                      placeholder="Enter Your Email"
-                      name="email"
-                      id="email"
-                    />
-                    <button
-                      type="submit"
-                      className="bg-orange-600 hover:bg-orange-600 w-full h-14 text-white font-bold py-2 px-4 rounded"
-                    >
-                      <a href="/path/to/your/app.apk" download>
-                        Notify me.
-                      </a>
-                    </button>
-                  </form>
+                  <div className='flex items-center justify-start gap-2 mb-5'>
+                    <div className='mb-2 w-fit relative'>
+                      <img className='h-12 mx-auto object-contain' src={logo} alt="navbar-logo" />
+                    </div>
+                    <p className='font-bold text-3xl text-black-100'>Bhojan Mitra</p>
+                  </div>
+
+                  <button
+                    className='rounded-lg py-4 whitespace-nowrap px-6 sm:px-12 text-base font-bold sm:text-xl text-white shadow-sm hover:opacity-90 transition 
+                    w-full max-w-md bg-orange-200 mb-5'>
+                    <a href="/path/to/your/app.apk" download>
+                      Download Now.
+                    </a>
+                  </button>
                 </div>
+                <h2 className="mb-3 text-2xl sm:text-2xl font-bold md:leading-tight text-black-100">
+                  Download Bhojan Mitra!
+                </h2>
               </section>
             </div>
           </div>
