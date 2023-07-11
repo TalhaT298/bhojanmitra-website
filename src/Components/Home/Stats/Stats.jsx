@@ -43,32 +43,11 @@ const Stats = () => {
         });
     };
 
-    // useEffect(() => {
-
-    // const counterNum = document.querySelectorAll('.number')
-    // // console.log(counterNum)
-    // const speed = 5;
-    // counterNum.forEach((element) => {
-    //     const updateNumber = () => {
-    //         const targetNumber = parseInt(element.dataset.number)
-    //         // console.log(targetNumber)
-    //         const initialNumber = parseInt(element.innerText);
-    //         const incrementNumber = Math.trunc(targetNumber / speed)
-    //         // console.log(incrementNumber)
-    //         if (initialNumber < targetNumber) {
-    //             element.innerText = `${initialNumber + incrementNumber}+`;
-    //             setTimeout(updateNumber, 1000)
-    //         }
-    //     }
-    //     updateNumber()
-    // })
-    // }, [])
-
     return (
         <div ref={statsRef}>
             <section className="px-5 py-10">
                 <div>
-                    <h1 className="text-black-100 text-4xl sm:text-5xl md:text-7xl font-bold md:leading-none text-center mb-5">
+                    <h1 className="text-black-100 text-4xl sm:text-5xl md:text-7xl font-bold md:leading-none text-center mb-3 sm:mb-5">
                         Application Status!
                     </h1>
                 </div>
