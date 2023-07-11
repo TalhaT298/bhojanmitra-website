@@ -1,29 +1,71 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const Stats = () => {
+    const statsRef = useRef(null);
 
     useEffect(() => {
-        const counterNum = document.querySelectorAll('.number')
-        // console.log(counterNum)
-        const speed = 5;
-        counterNum.forEach((element) => {
-            const updateNumber = () => {
-                const targetNumber = parseInt(element.dataset.number)
-                // console.log(targetNumber)
-                const initialNumber = parseInt(element.innerText);
-                const incrementNumber = Math.trunc(targetNumber / speed)
-                // console.log(incrementNumber)
-                if (initialNumber < targetNumber) {
-                    element.innerText = `${initialNumber + incrementNumber}+`;
-                    setTimeout(updateNumber, 1000)
-                }
+        const observer = new IntersectionObserver((entries) => {
+            handleIntersection(entries)
+        }, {
+            root: null, // Use the viewport as the root element
+            threshold: 1, // Trigger when 50% of the component is visible
+        });
+
+        if (statsRef.current) {
+            observer.observe(statsRef.current);
+        }
+
+        return () => {
+            if (statsRef.current) {
+                observer.unobserve(statsRef.current);
             }
-            updateNumber()
-        })
-    }, [])
+        };
+    }, []);
+
+    const handleIntersection = (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const speed = 5;
+                const counterNum = document.querySelectorAll('.number')
+                counterNum?.forEach((element) => {
+                    const updateNumber = () => {
+                        const targetNumber = parseInt(element.dataset.number);
+                        const initialNumber = parseInt(element.innerText);
+                        const incrementNumber = Math.trunc(targetNumber / speed);
+                        if (initialNumber < targetNumber) {
+                            element.innerText = `${initialNumber + incrementNumber}+`;
+                            setTimeout(updateNumber, 1000);
+                        }
+                    };
+                    updateNumber();
+                });
+            }
+        });
+    };
+
+    // useEffect(() => {
+
+    // const counterNum = document.querySelectorAll('.number')
+    // // console.log(counterNum)
+    // const speed = 5;
+    // counterNum.forEach((element) => {
+    //     const updateNumber = () => {
+    //         const targetNumber = parseInt(element.dataset.number)
+    //         // console.log(targetNumber)
+    //         const initialNumber = parseInt(element.innerText);
+    //         const incrementNumber = Math.trunc(targetNumber / speed)
+    //         // console.log(incrementNumber)
+    //         if (initialNumber < targetNumber) {
+    //             element.innerText = `${initialNumber + incrementNumber}+`;
+    //             setTimeout(updateNumber, 1000)
+    //         }
+    //     }
+    //     updateNumber()
+    // })
+    // }, [])
 
     return (
-        <div>
+        <div ref={statsRef}>
             <section className="px-5 py-10">
                 <div>
                     <h1 className="text-black-100 text-4xl sm:text-5xl md:text-7xl font-bold md:leading-none text-center mb-5">
