@@ -11,7 +11,7 @@ const Privacy = () => {
                 <div className="relative isolate z-50 max-w-7xl py-20 sm:pt-24 mx-auto">
 
                     <div className='font-popins mb-20 text-center'>
-                        <h2 className='text-2xl font-bold text-black-100 md:leading-tight sm:text-6xl mb-5'>
+                        <h2 className='text-2xl font-bold text-black-100 md:leading-tight sm:text-6xl mb-5 mt-5'>
                             Terms & Conditions
                         </h2>
 

@@ -36,7 +36,7 @@ const Header = () => {
                         <Link to={'privacy-policy'} className='text-black-100 font-light text-base' href="#aashram">Privacy</Link>
                     </li>
                     <li className=''>
-                        <a className='text-black-100 font-light text-base' href="#faq">Faq</a>
+                        <a className='text-black-100 font-light text-base' href="#faq">FAQ</a>
                     </li>
                 </ul>
 
