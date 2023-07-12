@@ -7,6 +7,7 @@ import { MdOutlineFeaturedPlayList } from 'react-icons/md';
 import { GiCampingTent } from 'react-icons/gi';
 import { FaQuestionCircle } from 'react-icons/fa';
 import { MdOutlinePrivacyTip } from 'react-icons/md';
+
 const Header = () => {
     const [show, setShow] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
@@ -72,12 +73,11 @@ const Header = () => {
                     <div className='absolute w-full left-0 right-0 bottom-10 text-center'>
                         <h3 className='font-popins font-bold text-white text-center text-xl'>Let&apos;s Start!</h3>
                         <p className='text-center font-semibold text-white'>Get in touch with us to work</p>
-                        <button className='text-white font-semibold bg-orange-200 max-w-[150px] w-full rounded-md'>Contact Us</button>
+
+                        <button className='text-white font-semibold max-w-[150px] w-full rounded-md'
+                        >Contact Us</button>
                     </div>
-
-
                 </ul>
-
                 <div className='sm:hidden'
                     onClick={() => setShow(!show)}>
                     <Hamburger
