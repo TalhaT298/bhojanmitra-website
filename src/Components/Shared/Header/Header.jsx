@@ -15,7 +15,7 @@ const Header = () => {
                     <div className='mb-2 w-fit relative'>
                         <img className='h-12 mx-auto object-contain pt-2' src={logo} alt="navbar-logo" />
                     </div>
-                    <a href="" className='font-bold text-2xl text-black-100'>Bhojan Mitra</a>
+                    <Link to="/" className='font-bold text-2xl text-black-100'>Bhojan Mitra</Link>
                 </div>
 
                 <ul className={`left-0 right-0 flex items-center flex-col absolute duration-700 justify-center font-popins sm:static sm:flex-row sm:justify-end sm:w-auto  ${show ? 'top-[10px]' : '-top-96'}`}>
