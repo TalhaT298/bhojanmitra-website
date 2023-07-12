@@ -6,7 +6,8 @@ export default {
   ],
   theme: {
     fontFamily: {
-      'popins': ['Poppins', 'sans-serif']
+      'popins': ['Poppins', 'sans-serif'],
+      'ibm': ['IBM Plex Sans', 'sans-serif'],
     },
     extend: {
       colors: {

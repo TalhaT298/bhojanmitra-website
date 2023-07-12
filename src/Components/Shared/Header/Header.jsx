@@ -42,7 +42,7 @@ const Header = () => {
 
                 {/* sidebar */}
                 <ul className={`sm:hidden w-[50%] h-[100vh] bg-black-100 p-5 -top-8 absolute duration-1000 ease-in-out ${show ? 'left-0' : '-left-1/2'}`}>
-                    <h3 className='text-3xl font-bold text-white mb-5'>Bhojan Mitra</h3>
+                    <h3 className='text-3xl font-semibold text-white mb-5 font-ibm uppercase tracking-widest'>Bhojan Mitra</h3>
                     <li className='mb-3'>
                         <a className='text-white font-semibold text-base flex items-center gap-2' href="#feature">
                             <MdOutlineFeaturedPlayList />
