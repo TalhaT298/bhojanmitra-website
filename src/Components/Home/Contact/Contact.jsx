@@ -1,6 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Contact = () => {
+    const [userEmail, setUserEmail] = useState('');
+
+    console.log(userEmail)
+
+    const handleSendEmail = () => {
+        if (userEmail === '') return
+        else {
+            emailjs.send(
+                'service_qq74o06',
+                'template_u18e64r',
+                detailEmail,
+                'fGjyaVSDV4-ihWS2s')
+        }
+    }
     return (
         <div className='w-full max-w-7xl mx-auto mt-12 sm:mt-32' style={{ backgroundColor: 'rgba(249, 219, 22, 0.08)' }}>
             <div>
@@ -15,6 +29,8 @@ const Contact = () => {
                                 <div>
                                     <form action="" className='flex flex-col sm:flex-row gap-y-2 sm:gap-y-2 max-w-2xl gap-x-2 items-center flex-wrap'>
                                         <input
+                                            onChange={(e) => setUserEmail(e.target.value)}
+
                                             className='flex-auto rounded-lg border-0 bg-white px-6 py-4 shadow-sm ring-1 ring-black-100 ring-opacity-10 text-slate-900 text-base focus:ring-2 w-full focus:outline-none focus:ring-black-100
                                             focus:ring-opacity-10 sm:text-xl sm:leading-6'
                                             type="email"

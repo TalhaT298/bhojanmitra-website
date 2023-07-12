@@ -79,7 +79,7 @@ const Feature = () => {
                             </p>
                         </div>
                         <div className='font-popins lg:grow lg:shrink lg:basis-[30%] text-start'>
-                            <span className='font-bold text-2xl text-orange-100 mb-2'>06</span>
+                            <span className='font-bold text-2xl text-orange-100 mb-2'>07</span>
                             <h3 className='text-2xl font-bold text-black-100 mb-2 md:text-3xl'>Education and Nourishment</h3>
                             <p className='sm:leading-relaxed text-lg sm:text-xl text-black-100'>
                                 The app provides nutritional guidance and recipes, empowering recipients.
