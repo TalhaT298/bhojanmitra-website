@@ -29,10 +29,10 @@ const Banner = () => {
               <section className="relative">
 
                 <div>
-                  <h2 className="mb-3 text-2xl sm:text-2xl font-bold md:leading-tight text-black-100">
+                  <h2 className="mb-3 text-2xl sm:text-2xl font-bold md:leading-tight text-black-100 text-center">
                     Download Bhojan Mitra!
                   </h2>
-                  <div className='flex items-center justify-start gap-2 mb-5'>
+                  <div className='flex items-center justify-center gap-2 mb-5'>
                     <div className='mb-2 w-fit relative'>
                       <img className='h-12 mx-auto object-contain' src={logo} alt="navbar-logo" />
                     </div>
