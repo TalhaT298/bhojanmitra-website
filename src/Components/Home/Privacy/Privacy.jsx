@@ -8,15 +8,13 @@ const Privacy = () => {
                     background:
                         "linear-gradient(70deg, rgba(204, 249, 22, 0.2) 40%, rgba(249, 115, 22, 0.24) 100%)",
                 }}>
-                <div className="relative isolate z-50 max-w-7xl py-12 sm:pt-24 mx-auto">
+                <div className="relative isolate z-50 max-w-7xl py-20 sm:pt-24 mx-auto">
 
                     <div className='font-popins mb-20 text-center'>
-                        <h2 className='text-4xl font-bold text-black-100 md:leading-tight md:text-6xl mb-5'>
-                            Terms and Conditions for Bhojan Mitra Mobile Application
+                        <h2 className='text-2xl font-bold text-black-100 md:leading-tight sm:text-6xl mb-5'>
+                            Terms & Conditions
                         </h2>
-                        {/* <h5 className='text-2xl text-black-100 sm:leading-relaxed'>
-                        Discover the benefits of using Bhojan Mitra
-                    </h5> */}
+
                         <p className='sm:leading-relaxed text-lg sm:text-xl text-black-100'>
                             These terms and conditions ("Terms") govern your access to and use of the Bhojan Mitra mobile application ("App") developed by Unicorniz Innovations Private Limited for food waste optimization. By downloading, installing, or using the App, you agree to be bound by these Terms. If you do not agree with these Terms, you must not use the App.
                         </p>
