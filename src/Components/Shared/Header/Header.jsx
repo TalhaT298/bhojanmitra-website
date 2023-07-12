@@ -68,6 +68,14 @@ const Header = () => {
                             <FaQuestionCircle />
                             Faq</a>
                     </li>
+
+                    <div className='absolute w-full left-0 right-0 bottom-10 text-center'>
+                        <h3 className='font-popins font-bold text-white text-center text-xl'>Let&apos;s Start!</h3>
+                        <p className='text-center font-semibold text-white'>Get in touch with us to work</p>
+                        <button className='text-white font-semibold bg-orange-200 max-w-[150px] w-full rounded-md'>Contact Us</button>
+                    </div>
+
+
                 </ul>
 
                 <div className='sm:hidden'
