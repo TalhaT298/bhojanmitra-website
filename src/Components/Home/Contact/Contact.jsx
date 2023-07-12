@@ -1,18 +1,26 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
     const [userEmail, setUserEmail] = useState('');
 
-    console.log(userEmail)
-
-    const handleSendEmail = () => {
+    // console.log(userEmail)
+    // console.log(form)
+    const handleSendEmail = (event) => {
+        event.preventDefault()
         if (userEmail === '') return
         else {
-            emailjs.send(
-                'service_qq74o06',
+            emailjs.sendForm(
+                'service_5gn55c9',
                 'template_u18e64r',
-                detailEmail,
-                'fGjyaVSDV4-ihWS2s')
+                userEmail,
+                'GVLsNqGj_GZZLCz0s')
+                .then((result) => {
+                    console.log(result.text);
+                    setUserEmail('')
+                }, (error) => {
+                    console.log(error.text);
+                });
         }
     }
     return (
@@ -27,7 +35,9 @@ const Contact = () => {
                                     Get notified about updates.
                                 </h2>
                                 <div>
-                                    <form action="" className='flex flex-col sm:flex-row gap-y-2 sm:gap-y-2 max-w-2xl gap-x-2 items-center flex-wrap'>
+                                    <form
+                                        onSubmit={handleSendEmail}
+                                        action="" className='flex flex-col sm:flex-row gap-y-2 sm:gap-y-2 max-w-2xl gap-x-2 items-center flex-wrap'>
                                         <input
                                             onChange={(e) => setUserEmail(e.target.value)}
 
@@ -37,7 +47,7 @@ const Contact = () => {
                                             placeholder='Enter Your Email'
                                             name="email" id="email" />
                                         <input
-                                            className='rounded-lg py-4 whitespace-nowrap px-6 sm:px-12 text-base font-bold sm:text-xl text-white shadow-sm hover:opacity-90 transition focus-visible:outline focus-visible:outline-2 w-full focus-visible:outline-offset-2 focus-visible:outline-white bg-orange-200'
+                                            className='rounded-lg py-4 whitespace-nowrap px-6 sm:px-12 text-base font-bold sm:text-xl text-white shadow-sm hover:opacity-90 transition focus-visible:outline focus-visible:outline-2 w-full focus-visible:outline-offset-2 focus-visible:outline-white bg-orange-200 cursor-pointer'
                                             type="submit" value="Notify me." />
                                     </form>
                                 </div>
