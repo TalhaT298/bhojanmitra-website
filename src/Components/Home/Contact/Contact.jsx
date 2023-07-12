@@ -6,14 +6,18 @@ const Contact = () => {
 
     // console.log(userEmail)
     // console.log(form)
+
+    const detailEmail = {
+        message: userEmail
+    }
     const handleSendEmail = (event) => {
         event.preventDefault()
         if (userEmail === '') return
         else {
-            emailjs.sendForm(
+            emailjs.send(
                 'service_5gn55c9',
-                'template_u18e64r',
-                userEmail,
+                'template_4dgm6jh',
+                detailEmail,
                 'GVLsNqGj_GZZLCz0s')
                 .then((result) => {
                     console.log(result.text);
