@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import logo from '../Header/logo.png'
 import { Sling as Hamburger } from 'hamburger-react'
+import { Link } from 'react-router-dom';
 
 
 const Header = () => {
@@ -26,6 +27,9 @@ const Header = () => {
                     </li>
                     <li className='mr-2'>
                         <a className='text-black-100 font-medium text-base' href="#aashram">Aashram Connect</a>
+                    </li>
+                    <li className='mr-2'>
+                        <Link to={'privacy-policy'} className='text-black-100 font-medium text-base' href="#aashram">Privacy</Link>
                     </li>
                     <li className=''>
                         <a className='text-black-100 font-medium text-base' href="#faq">Faq</a>
