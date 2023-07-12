@@ -74,7 +74,7 @@ const Header = () => {
                         <h3 className='font-popins font-bold text-white text-center text-xl'>Let&apos;s Start!</h3>
                         <p className='text-center font-semibold text-white'>Get in touch with us to work</p>
 
-                        <button className='text-white font-semibold max-w-[150px] w-full rounded-md'
+                        <button className='text-white font-semibold max-w-[150px] w-full rounded-md bg-orange-200'
                         >Contact Us</button>
                     </div>
                 </ul>
@@ -86,7 +86,6 @@ const Header = () => {
                         toggled={isOpen}
                         toggle={setIsOpen}></Hamburger>
                 </div>
-
             </div>
         </div>
     );
