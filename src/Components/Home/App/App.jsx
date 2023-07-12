@@ -7,8 +7,8 @@ const App = () => {
   return (
     <section id="app" className="px-5 sm:py-32 md:py-5 relative mb-5">
       <div className="w-full max-w-7xl mx-auto relative text-center font-popins">
-        <div>
-          <h2 className="text-4xl sm:text-5xl md:leading-tight mb-3 sm:mb-5 font-bold text-black-100 ">
+        <div className='mb-5 sm:mb-7'>
+          <h2 className="text-4xl sm:text-5xl md:leading-tight font-bold text-black-100 ">
             App Launch!
           </h2>
         </div>
