@@ -35,33 +35,34 @@ const Banner = () => {
             </div>
             <div>
               <section className="relative">
-                <div>
+                <div className='flex-col'>
                   <h2 className="mb-3 text-2xl sm:text-2xl font-bold md:leading-tight text-black-100 text-center">
                     Download Bhojan Mitra!
                   </h2>
-                  <div className="flex items-center justify-center gap-2 mb-5">
-                    <div className="mb-2 w-fit relative">
+                  <div className="items-center justify-center gap-2 mb-5 flex-col mx-auto">
+                    <div className="mb-2 w-fit relative flex items-center justify-center mx-auto">
                       <img
                         className="h-10 sm:h-12 mx-auto object-contain"
                         src={logo}
                         alt="navbar-logo"
                       />
+                      <p className="font-bold text-2xl sm:text-3xl text-black-100">
+                        Bhojan Mitra
+                      </p>
                     </div>
-                    <p className="font-bold text-2xl sm:text-3xl text-black-100">
-                      Bhojan Mitra
-                    </p>
-                  </div>
-
-                  <button
-                    onClick={handleDownload}
-                    className="rounded-lg py-4 whitespace-nowrap px-6 sm:px-12 text-base font-bold sm:text-xl text-white shadow-sm hover:opacity-90 transition 
-                    w-full max-w-md bg-orange-200 mb-5"
-                  >
-                    {/* <a href='https://doc-08-ag-docs.googleusercontent.com/docs/securesc/hm99h9bo5q9a0rensg6obb6d0j7a130b/kse1aq80ou452l4e0ur3si9pt9co7kut/1689238425000/16055646127569266571/01196853328180328537/1PGD5dF3_PSsQ1IA_VEFsGKlS6whGtn8i?e=download&ax=AGtFMPXxGcFIQjjXLNMwmb8bDOvm_UTLppos3dB8ghXPy1gaM2qks2L0u8WppW0xwJ0TJjmSw-nX8c5URQuFps5ickB5cCWaq39_--M74iQGNBiQ13HTqUHa15JioWoUDR79vv99bcSXgsIFblhj3kBIj20w4U-1KIQ9TiSeTbqQYvOxApbkVmifPDUluGA-9twtjc9Hf8z85LIUv6Gdxjg0312MjEo0P6B5rymLE3-mwY0mtKzXGACijVq2pb9xxUjzoTt-lVZdDe9jqm5o-c-s1plO9xfosom49VdneJjYLcFVGpetP5iqvD-WKS_ctCI25qWc9_IgN6vGwxEoDA1d8KWlkmHBZ4tO8j-23tXD5eoL6czLWOaArehXMOSqNf6S7VpxvFUKJdVf1rdjc9Vvyp-IWbdY159QnnDUOf4Bc2o6HEVCuVxOW5jIAXO9AaBq9YiL5ctGg92OP2XY3lnJ2O4B87I4sNpD012NCvEW4aEv40a7hEyEPMxdKHlVlyzLQ0PYAV-4vcE5lm6ZrF3HntwW17lQrAdrez93DRehLLZOnwHUc6Mh9ziwxy8xhl_8jkCNeVsT2UO69D59zHqmEpwRFwRezXvGXydPoyRywDyQH1GRXaOEhviHm6BFJy69C97rRYqYHSY5QWXyczgvYTkKO-Z6cNptID-Gpc8XWmBDCzILcb1sSdkwVYVNKqGo2jz137aRN2L7861BtVkn2eMCwdMm1Aa7uTyp2UtqqBor0TK71YqvtrsVryEKvIzvABbVh4lFGYJLyMIE-TWrs1h4bv3yhm8EpISFhrVbk_bfdB8UN15sDuTfatIwurs7fnhcNj_oUI7MX-zKGFp_H-enhuIKt070JfHUyPwKfApNs-4gfgqBj5vJdeU4L2Wzz42X5zLzfyxQdnWlvp6qJnX64lmBxF4CgvbqxPTBfdaXLUgWoXi0YzwzPwid7Iwx2afnLw&uuid=547fcba5-7891-4c55-95fe-c545e4e7738c&authuser=0&nonce=13q9glllrkoeu&user=01196853328180328537&hash=qo6e60ni7h14v1i6clb19o8t73briul5' download>
+                    <div className='flex items-center justify-center'>
+                      <button
+                        onClick={handleDownload}
+                        className="rounded-lg py-4 whitespace-nowrap text-base font-bold sm:text-xl text-white shadow-sm hover:opacity-90 transition 
+                      w-[75%] bg-orange-200 mb-5"
+                      >
+                        {/* <a href='https://doc-08-ag-docs.googleusercontent.com/docs/securesc/hm99h9bo5q9a0rensg6obb6d0j7a130b/kse1aq80ou452l4e0ur3si9pt9co7kut/1689238425000/16055646127569266571/01196853328180328537/1PGD5dF3_PSsQ1IA_VEFsGKlS6whGtn8i?e=download&ax=AGtFMPXxGcFIQjjXLNMwmb8bDOvm_UTLppos3dB8ghXPy1gaM2qks2L0u8WppW0xwJ0TJjmSw-nX8c5URQuFps5ickB5cCWaq39_--M74iQGNBiQ13HTqUHa15JioWoUDR79vv99bcSXgsIFblhj3kBIj20w4U-1KIQ9TiSeTbqQYvOxApbkVmifPDUluGA-9twtjc9Hf8z85LIUv6Gdxjg0312MjEo0P6B5rymLE3-mwY0mtKzXGACijVq2pb9xxUjzoTt-lVZdDe9jqm5o-c-s1plO9xfosom49VdneJjYLcFVGpetP5iqvD-WKS_ctCI25qWc9_IgN6vGwxEoDA1d8KWlkmHBZ4tO8j-23tXD5eoL6czLWOaArehXMOSqNf6S7VpxvFUKJdVf1rdjc9Vvyp-IWbdY159QnnDUOf4Bc2o6HEVCuVxOW5jIAXO9AaBq9YiL5ctGg92OP2XY3lnJ2O4B87I4sNpD012NCvEW4aEv40a7hEyEPMxdKHlVlyzLQ0PYAV-4vcE5lm6ZrF3HntwW17lQrAdrez93DRehLLZOnwHUc6Mh9ziwxy8xhl_8jkCNeVsT2UO69D59zHqmEpwRFwRezXvGXydPoyRywDyQH1GRXaOEhviHm6BFJy69C97rRYqYHSY5QWXyczgvYTkKO-Z6cNptID-Gpc8XWmBDCzILcb1sSdkwVYVNKqGo2jz137aRN2L7861BtVkn2eMCwdMm1Aa7uTyp2UtqqBor0TK71YqvtrsVryEKvIzvABbVh4lFGYJLyMIE-TWrs1h4bv3yhm8EpISFhrVbk_bfdB8UN15sDuTfatIwurs7fnhcNj_oUI7MX-zKGFp_H-enhuIKt070JfHUyPwKfApNs-4gfgqBj5vJdeU4L2Wzz42X5zLzfyxQdnWlvp6qJnX64lmBxF4CgvbqxPTBfdaXLUgWoXi0YzwzPwid7Iwx2afnLw&uuid=547fcba5-7891-4c55-95fe-c545e4e7738c&authuser=0&nonce=13q9glllrkoeu&user=01196853328180328537&hash=qo6e60ni7h14v1i6clb19o8t73briul5' download>
                       Download Now.
                     </a> */}
-                    Download Now.
-                  </button>
+                        Download Now.
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </section>
             </div>
