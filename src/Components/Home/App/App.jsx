@@ -14,12 +14,11 @@ const App = () => {
         </div>
         <div style={{ backgroundColor: 'rgba(249, 219, 22, 0.08)' }}>
           <div className="flex items-center justify-center">
-            <div className="w-full flex items-center justify-center gap-5 px-5 mb-5">
+            <div className="w-full flex items-center justify-center gap-5 px-0 sm:px-5 mb-5">
               <img
                 src={imageOne}
-                className="rounded-md"
+                className="rounded-md w-full sm:w-[60%]"
                 alt={'app launch image'}
-                style={{ width: '60%' }}
               />
             </div>
           </div>
