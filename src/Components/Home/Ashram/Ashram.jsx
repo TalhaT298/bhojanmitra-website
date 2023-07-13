@@ -63,6 +63,7 @@ const Ashram = () => {
                         <div className='w-full h-[550px] flex items-center justify-center gap-5 px-5'>
                             {images?.map((image, index) =>
                                 < img
+                                    key={image.src}
                                     src={image?.src}
                                     className={`rounded-md transition-opacity absolute duration-1000 ease-in-out w-full max-w-xl object-cover ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}
                                     alt={image?.alt}
