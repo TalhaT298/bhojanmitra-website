@@ -1,7 +1,15 @@
 import React from 'react';
 import logo from '../../../../public/assets/images/fmibx93p785ldw063amhkzmfyti2 (1).png';
+import apkFile from '../../../../src/assets/BhojanMitra.apk'
 
 const Banner = () => {
+
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = apkFile;
+    link.download = 'app.apk';
+    link.click();
+  };
   return (
     <div className="relative isolate">
       <section
@@ -45,10 +53,13 @@ const Banner = () => {
                   </div>
 
                   <button
+                    onClick={handleDownload}
                     className="rounded-lg py-4 whitespace-nowrap px-6 sm:px-12 text-base font-bold sm:text-xl text-white shadow-sm hover:opacity-90 transition 
                     w-full max-w-md bg-orange-200 mb-5"
                   >
-                    <a href="/path/to/your/app.apk" download>
+                    {/* Download Now. */}
+
+                    <a href="https://drive.google.com/u/0/uc?id=1PGD5dF3_PSsQ1IA_VEFsGKlS6whGtn8i&export=download" download>
                       Download Now.
                     </a>
                   </button>

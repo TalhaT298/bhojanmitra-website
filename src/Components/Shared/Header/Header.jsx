@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import logo from '../Header/logo.png';
 import { Sling as Hamburger } from 'hamburger-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { AiOutlineAppstoreAdd } from 'react-icons/ai';
 import { MdOutlineFeaturedPlayList } from 'react-icons/md';
 import { GiCampingTent } from 'react-icons/gi';
@@ -24,7 +24,7 @@ const Header = () => {
 
                 <ul className={`sm:flex items-center flex-col absolute duration-700 justify-center font-popins sm:static sm:flex-row sm:justify-end sm:w-auto hidden`}>
                     <li className='mr-3'>
-                        <a className='text-black-100 font-light text-base' href="#feature">Features</a>
+                        <a className='text-black-100 font-light text-base' href={`#feature`}>Features</a>
                     </li>
                     <li className='mr-3'>
                         <a className='text-black-100 font-light text-base' href="#app">App Launch</a>
@@ -33,7 +33,7 @@ const Header = () => {
                         <a className='text-black-100 font-light text-base' href="#aashram">Campaign</a>
                     </li>
                     <li className='mr-3'>
-                        <Link to={'privacy-policy'} className='text-black-100 font-light text-base' href="#aashram">Privacy</Link>
+                        <Link to={'privacy-policy'} className='text-black-100 font-light text-base'>Privacy</Link>
                     </li>
                     <li className=''>
                         <a className='text-black-100 font-light text-base' href="#faq">FAQ</a>
@@ -60,7 +60,7 @@ const Header = () => {
                             Campaign</a>
                     </li>
                     <li className='mb-3'>
-                        <Link to={'privacy-policy'} className='text-white font-semibold text-base flex items-center gap-2' href="#aashram">
+                        <Link to={'privacy-policy'} className='text-white font-semibold text-base flex items-center gap-2'>
                             <MdOutlinePrivacyTip />
                             Privacy</Link>
                     </li>
