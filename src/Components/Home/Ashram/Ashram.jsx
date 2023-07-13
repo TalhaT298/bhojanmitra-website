@@ -61,13 +61,13 @@ const Ashram = () => {
                             <SlArrowLeft className='text-4xl' />
                         </button>
                         <div className='w-full h-[550px] flex items-center justify-center gap-5 px-5'>
-
-                            <img
-                                src={images[currentIndex].src}
-                                className='rounded-md transition-all duration-700 ease-in-out w-full max-w-xl object-cover'
-                                alt={images[currentIndex].alt}
-                                style={{ height: '500px' }}
-                            />
+                            {images?.map((image, index) =>
+                                < img
+                                    src={image?.src}
+                                    className={`rounded-md transition-opacity absolute duration-1000 ease-in-out w-full max-w-xl object-cover ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}
+                                    alt={image?.alt}
+                                    style={{ height: '500px' }}
+                                />)}
                         </div>
                         <button
                             onClick={goToNext}
@@ -114,3 +114,4 @@ const Ashram = () => {
 };
 
 export default Ashram;
+
