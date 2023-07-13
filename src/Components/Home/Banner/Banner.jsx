@@ -27,31 +27,37 @@ const Banner = () => {
             </div>
             <div>
               <section className="relative">
-                <div>
+                <div className="flex-col">
                   <h2 className="mb-3 text-2xl sm:text-2xl font-bold md:leading-tight text-black-100 text-center">
                     Download Bhojan Mitra!
                   </h2>
-                  <div className="flex items-center justify-center gap-2 mb-5">
-                    <div className="mb-2 w-fit relative">
+                  <div className="flex-col items-center justify-center mx-auto gap-2 mb-5">
+                    <div className="mb-2 flex items-center justify-center mx-auto w-fit relative">
                       <img
                         className="h-10 sm:h-12 mx-auto object-contain"
                         src={logo}
                         alt="navbar-logo"
                       />
+                      <p className="font-bold text-2xl text-center sm:text-3xl text-black-100">
+                        Bhojan Mitra
+                      </p>
                     </div>
-                    <p className="font-bold text-2xl sm:text-3xl text-black-100">
-                      Bhojan Mitra
-                    </p>
+                    <div className="flex items-center justify-center">
+                      <button
+                        className="rounded-lg py-4 whitespace-nowrap text-base font-bold sm:text-xl text-white shadow-sm hover:opacity-90 transition 
+                      w-[75%] bg-orange-200 mb-5"
+                        href="/path/to/your/app.apk"
+                      >
+                        <a
+                          href="/path/to/your/app.apk"
+                          download
+                          className="flex items-center justify-center"
+                        >
+                          Download Now
+                        </a>
+                      </button>
+                    </div>
                   </div>
-
-                  <button
-                    className="rounded-lg py-4 whitespace-nowrap px-6 sm:px-12 text-base font-bold sm:text-xl text-white shadow-sm hover:opacity-90 transition 
-                    w-full max-w-md bg-orange-200 mb-5"
-                  >
-                    <a href="/path/to/your/app.apk" download>
-                      Download Now.
-                    </a>
-                  </button>
                 </div>
               </section>
             </div>
