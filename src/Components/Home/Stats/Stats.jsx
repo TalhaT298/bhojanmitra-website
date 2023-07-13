@@ -47,7 +47,7 @@ const Stats = () => {
         <div ref={statsRef}>
             <section className="px-5 py-10">
                 <div>
-                    <h1 className="text-black-100 text-4xl sm:text-5xl md:text-6xl font-bold md:leading-none text-center mb-3 sm:mb-7">
+                    <h1 className="text-black-100 text-4xl sm:text-5xl md:text-7xl font-bold md:leading-none text-center mb-3 sm:mb-7">
                         Application Status!
                     </h1>
                 </div>
