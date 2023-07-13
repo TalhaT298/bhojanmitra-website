@@ -1,7 +1,7 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import logo from '../Header/logo.png';
 import { Sling as Hamburger } from 'hamburger-react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AiOutlineAppstoreAdd } from 'react-icons/ai';
 import { MdOutlineFeaturedPlayList } from 'react-icons/md';
 import { GiCampingTent } from 'react-icons/gi';
@@ -11,6 +11,16 @@ import { MdOutlinePrivacyTip } from 'react-icons/md';
 const Header = () => {
     const [show, setShow] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    // useEffect(() => {
+    if (location.pathname.includes('privacy-policy') && location.hash) {
+        console.log(location)
+        navigate('/')
+    }
+    // }, [location?.hash])
 
     return (
         <div className='w-full max-w-7xl mx-auto absolute top-8 left-0 right-0 z-50'>
