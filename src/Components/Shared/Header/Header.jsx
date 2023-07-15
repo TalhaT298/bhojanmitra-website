@@ -11,16 +11,20 @@ import { MdOutlinePrivacyTip } from 'react-icons/md';
 const Header = () => {
     const [show, setShow] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const [refresh, setRefresh] = useState(false);
+
+    // console.log(refresh)
 
     const location = useLocation();
     const navigate = useNavigate();
+    // console.log(location)
 
     // useEffect(() => {
-    if (location.pathname.includes('privacy-policy') && location.hash) {
-        console.log(location)
+    if (location?.pathname?.includes('/privacy-policy') && location?.hash) {
+        // console.log('inside useEffect')
         navigate('/')
     }
-    // }, [location?.hash])
+    // }, [refresh, location.hash])
 
     return (
         <div className='w-full max-w-7xl mx-auto absolute top-8 left-0 right-0 z-50'>
@@ -34,19 +38,28 @@ const Header = () => {
 
                 <ul className={`sm:flex items-center flex-col absolute duration-700 justify-center font-popins sm:static sm:flex-row sm:justify-end sm:w-auto hidden`}>
                     <li className='mr-3'>
-                        <a className='text-black-100 font-light text-base' href={`#feature`}>Features</a>
+                        <a
+                            onClick={() => setRefresh(!refresh)}
+                            className='text-black-100 font-light text-base' href={`#feature`}>Features</a>
                     </li>
                     <li className='mr-3'>
-                        <a className='text-black-100 font-light text-base' href="#app">App Launch</a>
+                        <a
+                            onClick={() => setRefresh(!refresh)}
+                            className='text-black-100 font-light text-base' href="#app">App Launch</a>
                     </li>
                     <li className='mr-3'>
-                        <a className='text-black-100 font-light text-base' href="#aashram">Campaign</a>
+                        <a
+                            onClick={() => setRefresh(!refresh)}
+                            className='text-black-100 font-light text-base' href="#aashram">Campaign</a>
                     </li>
                     <li className='mr-3'>
-                        <Link to={'privacy-policy'} className='text-black-100 font-light text-base'>Privacy</Link>
+                        <Link to={'privacy-policy'}
+                            className='text-black-100 font-light text-base'>Privacy</Link>
                     </li>
                     <li className=''>
-                        <a className='text-black-100 font-light text-base' href="#faq">FAQ</a>
+                        <a
+                            onClick={() => setRefresh(!refresh)}
+                            className='text-black-100 font-light text-base' href="#faq">FAQ</a>
                     </li>
                 </ul>
 
